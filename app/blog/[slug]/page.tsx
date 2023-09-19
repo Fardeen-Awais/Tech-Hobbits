@@ -8,6 +8,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
 import PortableText from "react-portable-text";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export default async function Page({ params }: { params: { slug: string } }) {
 
@@ -19,16 +20,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
   });
   const blog = await client.fetch(`*[_type == "post" && slug.current == '${params.slug}'][0]`, { cache: 'no-cache' });
   const builder = imageUrlBuilder(client);
-  console.log(blog.body)
-  // const imageUrl = builder.image(blog.body.asset._ref).url();
-  // console.log(imageUrl)
-  console.log({blog})
+
   return (
     <>
       <div className="mx-auto p-5 md:p-10 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-5xl m-[30px] mt-6 ">
         <div>
           <h1>{blog.title}</h1>
-          <p>{blog.desc}</p>
+          <p className="text-xl">{blog.desc}</p>
         </div>
         <article>
           <PortableText
@@ -37,9 +35,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
             dataset="production"
 
             serializers={{
-              h1: (props: any) => <h1 className="sm:text-4xl text-3xl font-bold py-5 " {...props} />,
-              h2: (props: any) => <h2 className="sm:text-4xl text-3xl font-bold  py-3" {...props} />,
-              h3: (props: any) => <h3 className="sm:text-3xl text-2xl font-bold  py-3" {...props} />,
+              h1: (props: any) => <h1 className={cn("py-5 ")} {...props} />,           
+              h2: (props: any) => <h2 className="sm:text-5xl text-4xl font-bold  py-3" {...props} />,
+              h3: (props: any) => <h3 className="sm:text-4xl text-3xl font-bold  py-3" {...props} />,
               summery: ({ children }: any) => (
                 <div className="w-fit sm:w-full mx-auto flex items-start my-4 p-10 bg-yellow-100 text-lg">
 
@@ -51,7 +49,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               ol: (props: any) => <ul className="list-decimal m-5 text-lg" {...props} />,
               normal: ({ children }: any) => <p className="text-xl ">{children}<br /></p>,
               link: ({ children }: any) => (
-                <Link href={`${children}`} target="_blank" className=" text-white hover:text-pink-600 py-3 cursor-pointer underline">{children} </Link>
+                <Link href={`${children}`} target="_blank" className=" text-white hover:text-pink-600 py-3 cursor-pointer underline px-2">{children} </Link>
               ),
             }}
           />

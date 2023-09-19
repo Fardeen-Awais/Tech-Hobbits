@@ -20,7 +20,7 @@ const Hero = () =>  {
       </div>
 
       <div className='w-80 h-80 sm:w-full sm:h-full'>
-        <Image
+        {/* <Image
         src={'/hero.webp'}
         alt="Hero Image"
         width={500}
@@ -33,7 +33,8 @@ const Hero = () =>  {
         style={{
           objectFit: "cover",
         }}
-      />
+      /> */}
+      <p>This is going into 3d model</p>
       </div>
     </section>
 
