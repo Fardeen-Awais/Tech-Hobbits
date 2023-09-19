@@ -4,7 +4,7 @@ import React from 'react'
 
 const Posts = () => {
   return (
-    <div className='h-screen'>
+    <div className='min-h-screen'>
         <Post/>
     </div>
   )
