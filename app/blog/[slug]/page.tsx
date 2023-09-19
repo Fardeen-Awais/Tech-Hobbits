@@ -40,7 +40,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
               h1: (props: any) => <h1 className="sm:text-4xl text-3xl font-bold py-5 " {...props} />,
               h2: (props: any) => <h2 className="sm:text-4xl text-3xl font-bold  py-3" {...props} />,
               h3: (props: any) => <h3 className="sm:text-3xl text-2xl font-bold  py-3" {...props} />,
-              highlight: (props: string) => <div className="bg-[#ffff86]" {...props} />,
               summery: ({ children }: any) => (
                 <div className="w-fit sm:w-full mx-auto flex items-start my-4 p-10 bg-yellow-100 text-lg">
 
