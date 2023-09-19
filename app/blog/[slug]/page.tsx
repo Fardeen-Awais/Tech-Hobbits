@@ -21,10 +21,10 @@ export default async function Page({ params }: { params: { slug: string }}) {
     console.log({blog})
 
     return(
-    <div className="min-h-screen">
+    <div className="min-h-screen flex">
         My Post: {params.slug} 
         {blog.title}
-        
+
     </div>
   )}
 
