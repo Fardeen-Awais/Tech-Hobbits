@@ -25,7 +25,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   console.log({blog})
   return (
     <>
-      <div className="mx-auto p-5 md:p-10 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-5xl m-[950px] mt-6 ">
+      <div className="mx-auto p-5 md:p-10 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-5xl m-[30px] mt-6 ">
         <div>
           <h1>{blog.title}</h1>
           <p>{blog.desc}</p>
