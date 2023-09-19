@@ -20,9 +20,10 @@ const Post = async () => {
     useCdn: true
   });
 
-  const result = await client.fetch(`*[_type == "post"]`);
+  const result = await client.fetch(`*[_type == "post"]`, { cache: 'no-cache' });
   const builder = imageUrlBuilder(client);
   const postsToDisplay = result;
+ 
   return (
 
     <section className='flex flex-col gap-3 max-w-7xl justify-center items-center min-h-screen px-5 mx-auto'>

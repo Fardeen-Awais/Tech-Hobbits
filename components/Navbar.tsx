@@ -106,12 +106,12 @@ const Navbar = () => {
                         <DropdownMenu>
                             <DropdownMenuTrigger><BiMenu className='w-7 h-7' /></DropdownMenuTrigger>
                             <DropdownMenuContent className={twMerge(`w-48 h-screen bg-opacity-40 backdrop-blur-md backdrop-filter transition-opacity p-5`)}>
-                                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                                <DropdownMenuLabel>Navigation Menu</DropdownMenuLabel>
                                 <DropdownMenuSeparator />
-                                <DropdownMenuItem>Profile</DropdownMenuItem>
-                                <DropdownMenuItem>About</DropdownMenuItem>
-                                <DropdownMenuItem>Services</DropdownMenuItem>
+                                <DropdownMenuItem><Link href="/" legacyBehavior passHref>Home</Link></DropdownMenuItem>
+                                <DropdownMenuItem><Link href="/about" legacyBehavior passHref>About</Link></DropdownMenuItem>
                                 <DropdownMenuItem><Link href="/blog" legacyBehavior passHref>Blogs</Link></DropdownMenuItem>
+                                <DropdownMenuItem><Link href="/price" legacyBehavior passHref>Service</Link></DropdownMenuItem>
                                 <DropdownMenuItem>Prices</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
