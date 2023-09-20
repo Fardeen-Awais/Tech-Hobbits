@@ -1,5 +1,5 @@
 # Alfarnex project
-Get started commit of techsquerrel
+Get started commit of Tech Hobbits
 
 ## Getting Started
 
@@ -14,27 +14,14 @@ Get started commit of techsquerrel
 
 ### Objectives 
 
-- Home page []
-    - Header [x]
-        - logo [x]
-        - Blured [x]
-        - Navlink [x]
-        - Theme changer [x]
-        - Language translator [x]
-        - Login []
-    - Hero [x]
-    - Our Story [x]
-    - Services [x]
-    - How we work []
-    - Prices []
-    - Testimonials []
-    - Footer []
-- Services []
-- Our Work []
-- Price []
-- Store []
-- Resources []
-- Job []
+- Frontend setup - [x]
+- Blog page [x] 
+- Adding 3d model []
+- Adding Dyanmic Tweets []
+- Adding Dynamic Services []
+- Dynamic Pricing board []
+- Dynamic Service Page []
+- Adding Google meet []
 
 ### Commit details
 

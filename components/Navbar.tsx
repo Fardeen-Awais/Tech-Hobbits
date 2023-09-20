@@ -90,9 +90,16 @@ const Navbar = () => {
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/price" legacyBehavior passHref>
+                        <Link href="/testimonial" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Price
+                                Testimonial
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link href="/contact" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                Contact
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -111,8 +118,9 @@ const Navbar = () => {
                                 <DropdownMenuItem><Link href="/" legacyBehavior passHref>Home</Link></DropdownMenuItem>
                                 <DropdownMenuItem><Link href="/about" legacyBehavior passHref>About</Link></DropdownMenuItem>
                                 <DropdownMenuItem><Link href="/blog" legacyBehavior passHref>Blogs</Link></DropdownMenuItem>
-                                <DropdownMenuItem><Link href="/price" legacyBehavior passHref>Service</Link></DropdownMenuItem>
-                                <DropdownMenuItem>Prices</DropdownMenuItem>
+                                <DropdownMenuItem><Link href="/testimonial" legacyBehavior passHref>Testimonial</Link></DropdownMenuItem>
+                                <DropdownMenuItem><Link href="/contact" legacyBehavior passHref>Service</Link></DropdownMenuItem>
+                                <DropdownMenuItem>Contact</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
 

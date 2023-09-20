@@ -1,10 +1,4 @@
-import { useRouter } from "next/router";
 import { createClient } from "next-sanity";
-// import { useForm } from "react-hook-form";
-import { useState } from "react";
-import Image from "next/image";
-import imageUrlBuilder from "@sanity/image-url";
-// import PortableText from "react-portable-text";
 import Head from "next/head";
 import PortableText from "react-portable-text";
 import Link from "next/link";
@@ -18,11 +12,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
     apiVersion: "2021-10-14",
     useCdn: false
   });
-  const blog = await client.fetch(`*[_type == "post" && slug.current == '${params.slug}'][0]`, { cache: 'no-cache' });
-  const builder = imageUrlBuilder(client);
-
+  const blog = await client.fetch(`*[_type == "post" && slug.current == '${params.slug}'][0]`, { next: { revalidate: 3600 } });
+  
   return (
     <>
+      <Head>
+        <title>{blog.title}</title>
+        <meta name="description" content={blog.desc} />
+      </Head>
+
       <div className="mx-auto p-5 md:p-10 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-5xl m-[30px] mt-6 ">
         <div>
           <h1>{blog.title}</h1>
@@ -35,7 +33,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             dataset="production"
 
             serializers={{
-              h1: (props: any) => <h1 className={cn("py-5 ")} {...props} />,           
+              h1: (props: any) => <h1 className={cn("py-5 ")} {...props} />,
               h2: (props: any) => <h2 className="sm:text-5xl text-4xl font-bold  py-3" {...props} />,
               h3: (props: any) => <h3 className="sm:text-4xl text-3xl font-bold  py-3" {...props} />,
               summery: ({ children }: any) => (
