@@ -23,7 +23,7 @@ const CubeModel = () => {
 
 function Cube(props: any) {
 
-    const mesh = useRef()
+    const mesh = useRef<any>(null) // Replace `THREE.Mesh` with the appropriate type for your mesh
 
     const options = {
         damping: 10
@@ -34,13 +34,13 @@ function Cube(props: any) {
     }
 
 
-    //* Drag Gesture
-    useFrame((state: any, delta: any) => {
-        mesh.current.rotation.x += delta * 0.25
-        mesh.current.rotation.y += delta * 0.25
-        mesh.current.rotation.z += delta * 0.25
-    })
-
+useFrame((state: any, delta: any) => {
+  if (mesh.current) {
+    mesh.current.rotation.x += delta * 0.25
+    mesh.current.rotation.y += delta * 0.25
+    mesh.current.rotation.z += delta * 0.25
+  }
+})
 
     const [texture_1, texture_2, texture_3, texture_4, texture_5, texture_6] = useTexture([
         '/assets/0.avif',
