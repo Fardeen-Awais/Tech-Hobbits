@@ -9,13 +9,13 @@ import { motion } from 'framer-motion-3d'
 
 const CubeModel = () => {
     return (
-        <div className='h-[100vh] w-[600px]'>
+        <div className='h-[40vh] sm:h-[90vh] w-[300px]'>
             <Canvas>
             <hemisphereLight intensity={0.15} groundColor="white" />
                 <Cube />
                 <OrbitControls enableZoom={false} enablePan={false} />
-                <ambientLight intensity={0.5} />
-                <directionalLight intensity={2} position={[4, 4, 4]} />
+                <ambientLight intensity={0.8} />
+                <directionalLight intensity={2} position={[1, 1, 1]} />
             </Canvas>
         </div>
     )
@@ -53,11 +53,14 @@ useFrame((state: any, delta: any) => {
     ])
 
 
+    const isMobile = window.innerWidth < 768 // Adjust the breakpoint as needed
 
+    const boxSize =  [2, 2, 2]
+  
     return (
         <>
             <motion.mesh ref={mesh} {...props} > {/* rotation-x={mouse.y} rotation-y={mouse.x}  */}
-                <boxGeometry args={[2.5, 2.5, 2.3]} /> {/* This basically scale it up to 2.5x2.5x2.5  */}
+                <boxGeometry args={boxSize} /> {/* This basically scale it up to 2.5x2.5x2.5  */}
                 {/* <meshStandardMaterial map={texture_1} attach="material-01" /> */}
                 {/* //  This basically add color only visible when light apply on cube  */}
                 <meshStandardMaterial map={texture_4} />
