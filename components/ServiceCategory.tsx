@@ -25,7 +25,7 @@ const ServiceCategory = async () => {
     <div className='flex flex-col justify-center items-center gap-10 min-h-screen '>
       <div className='flex flex-col justify-center items-center'>
         <h2>Our Services</h2>
-        <p>Let&lsquo;s Explore our Services</p>
+        <p>Let&lsquo;s Explore our Buisness Friendly Services</p>
       </div>
       <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-x-10 max-w-7xl px-10 text-center gap-10'>
         {

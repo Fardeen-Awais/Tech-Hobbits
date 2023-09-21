@@ -2,11 +2,15 @@ import React from 'react'
 import { BiLogoReact } from 'react-icons/bi'
 import { BsMicrosoftTeams } from 'react-icons/bs'
 import { AiOutlineCode } from 'react-icons/ai'
-import vercel from '/public/amazon.png'
+import vercel from '/public/vercel.svg'
+import resend from '/public/resend.png'
+import nextjs from '/public/nextjs.webp'
+import amazon from '/public/amazon.png'
+import shopify from '/public/shopify.png'
 import Image from 'next/image'
 const Storyline = () => {
   return (
-    <section className='flex flex-col gap-1 max-w-7xl justify-between items-center min-h-screen py-1 mx-auto'>
+    <section className='flex flex-col max-w-7xl justify-between items-center min-h-screen py-1 mx-auto gap-10'>
       <div className='grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
         <div>
           <div className=''><BiLogoReact  className='w-10 h-10 text-cyan-500' /></div>
@@ -33,19 +37,19 @@ const Storyline = () => {
         </div>
       </div>
 
-      <div className='flex flex-col justify-center items-center min-h-screen my-10'>
-        <h3 className='text-center p-5'>Our Services is brought to you with the help of these companies</h3>
-        <div className='flex justify-center items-center py-10'>
-          <div className='grid grid-cols-1 md:grid-cols-5 gap-5'>
+      <div className='flex flex-col justify-center items-center min-h-screen gap-10'>
+        <h3 className='text-center p-10'>Our Services is brought to you with the help of these companies</h3>
+        <div className='flex justify-center items-center py-5'>
+          <div className='grid grid-cols-1 justify-items-center align-items-center md:grid-cols-2 gap-10'>
             <div className='w-28 h-28'><Image src={vercel} width={350} height={350} alt="Picture of the author"/>
             </div>
-            <div className='w-28 h-28'><Image src={vercel} width={350} height={350} alt="Picture of the author"/>
+            <div className='w-28 h-28'><Image src={amazon} width={350} height={350} alt="Picture of the author"/>
             </div>
-            <div className='w-28 h-28'><Image src={vercel} width={350} height={350} alt="Picture of the author"/>
+            <div className='w-28 h-28'><Image src={resend} width={350} height={350} alt="Picture of the author"/>
             </div>
-            <div className='w-28 h-28'><Image src={vercel} width={350} height={350} alt="Picture of the author"/>
+            <div className='w-28 h-28'><Image src={shopify} width={350} height={350} alt="Picture of the author"/>
             </div>
-            <div className='w-28 h-28'><Image src={vercel} width={350} height={350} alt="Picture of the author"/>
+            <div className='w-40 h-40'><Image src={nextjs} width={350} height={350} alt="Picture of the author"/>
             </div>
           </div>
         </div>

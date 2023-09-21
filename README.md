@@ -16,12 +16,14 @@ Get started commit of Tech Hobbits
 
 - Frontend setup - [x]
 - Blog page [x] 
-- Adding 3d model []
+- Adding 3d model [x]
 - Adding Dyanmic Tweets []
-- Adding Dynamic Services []
+- Adding Dynamic Services [x]
 - Dynamic Pricing board []
-- Dynamic Service Page []
-- Adding Google meet []
+- Dynamic Service Page [x]
+- Adding Google meet [x]
+- Contact Us []
+- About Us []
 
 ### Commit details
 
