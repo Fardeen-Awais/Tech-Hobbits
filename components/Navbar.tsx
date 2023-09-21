@@ -22,8 +22,8 @@ import {
     DropdownMenuTrigger
 } from './ui/dropdown-menu'
 
-
 const Navbar = () => {
+
     return (
         <header className='sticky top-0 z-20 border-b border-transparent bg-opacity-80 backdrop-blur-sm backdrop-filter transition-opacity duration-200 ease-in-out mx-auto px-5 md:px-10 h-20 flex items-center justify-center list-none'>
             <nav className='flex justify-between items-center w-full py-4'>
@@ -44,43 +44,15 @@ const Navbar = () => {
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem >
-                        <NavigationMenuTrigger>Service</NavigationMenuTrigger>
-                        <NavigationMenuContent >
-                           <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-x-10 min-w-max  p-10 bg-white text-gray-900 text-center'>
-                            <div className='flex flex-col '>
-                                <h3>Software</h3>
-                                <div>
-                                    <p>UI/UX Design</p>
-                                    <p>Web app </p>
-                                    <p>Mobile app </p>
-                            </div>
-                            </div>
-                            <div className='flex flex-col '>
-                                <h3>Marketing</h3>
-                                <div>
-                                    <p>Social Media Marketing</p>
-                                    <p>Email Marketing</p>
-                                    <p>Ads Compaign</p>
-                            </div>
-                            </div>
-                            <div className='flex flex-col '>
-                                <h3>SEO</h3>
-                                <div>
-                                    <p>Web Seo</p>
-                                    <p>Youtube SEO</p>
-                                    <p>Meta SEO</p>
-                            </div>
-                            </div>
-                            <div className=''>
-                                <h3>Graphic Design</h3>
-                                <div>
-                                    <p>3D Model Design</p>
-                                    <p>Motion Graphics</p>
-                                    <p>Content Graphics</p>
-                            </div>
-                            </div>
-                           </div>
-                        </NavigationMenuContent>
+                        {/* <NavigationMenuTrigger>Service</NavigationMenuTrigger> */}
+                        {/* <NavigationMenuContent >
+                            <ServiceItems />
+                        </NavigationMenuContent> */}
+                         <Link href="/service" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                Service
+                            </NavigationMenuLink>
+                        </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link href="/blog" legacyBehavior passHref>
@@ -119,8 +91,8 @@ const Navbar = () => {
                                 <DropdownMenuItem><Link href="/about" legacyBehavior passHref>About</Link></DropdownMenuItem>
                                 <DropdownMenuItem><Link href="/blog" legacyBehavior passHref>Blogs</Link></DropdownMenuItem>
                                 <DropdownMenuItem><Link href="/testimonial" legacyBehavior passHref>Testimonial</Link></DropdownMenuItem>
-                                <DropdownMenuItem><Link href="/contact" legacyBehavior passHref>Service</Link></DropdownMenuItem>
-                                <DropdownMenuItem>Contact</DropdownMenuItem>
+                                <DropdownMenuItem><Link href="/service" legacyBehavior passHref>Service</Link></DropdownMenuItem>
+                                <DropdownMenuItem><Link href="/contact" legacyBehavior passHref>Contact</Link></DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
 

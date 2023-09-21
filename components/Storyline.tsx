@@ -6,7 +6,7 @@ import vercel from '/public/amazon.png'
 import Image from 'next/image'
 const Storyline = () => {
   return (
-    <section className='flex flex-col gap-3 max-w-7xl justify-center items-center min-h-screen py-10 mx-auto'>
+    <section className='flex flex-col gap-1 max-w-7xl justify-between items-center min-h-screen py-1 mx-auto'>
       <div className='grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
         <div>
           <div className=''><BiLogoReact  className='w-10 h-10 text-cyan-500' /></div>
@@ -33,7 +33,7 @@ const Storyline = () => {
         </div>
       </div>
 
-      <div className='flex flex-col justify-center items-center'>
+      <div className='flex flex-col justify-center items-center h-96 my-10'>
         <h3 className='text-center p-5'>Our Services is brought to you with the help of these companies</h3>
         <div className='flex justify-center items-center py-10'>
           <div className='grid grid-cols-1 md:grid-cols-5 gap-5'>
@@ -47,14 +47,6 @@ const Storyline = () => {
             </div>
             <div className='w-28 h-28'><Image src={vercel} width={350} height={350} alt="Picture of the author"/>
             </div>
-          </div>
-          <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
           </div>
         </div>
       </div>
