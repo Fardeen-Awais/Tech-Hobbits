@@ -33,7 +33,7 @@ const Storyline = () => {
         </div>
       </div>
 
-      <div className='flex flex-col justify-center items-center h-96 my-10'>
+      <div className='flex flex-col justify-center items-center min-h-screen my-10'>
         <h3 className='text-center p-5'>Our Services is brought to you with the help of these companies</h3>
         <div className='flex justify-center items-center py-10'>
           <div className='grid grid-cols-1 md:grid-cols-5 gap-5'>
