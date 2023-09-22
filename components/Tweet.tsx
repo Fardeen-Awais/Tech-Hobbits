@@ -7,8 +7,9 @@ interface TweetReviewProps {
 }
 
 const TweetReview: React.FC<TweetReviewProps> = ({ tweetid }) => {
+
   return (
-    <div className='dark'>
+    <div className='light p-5 '>
       <Tweet id={tweetid} components={components} />
     </div>
   );

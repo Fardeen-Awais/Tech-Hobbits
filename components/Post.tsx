@@ -20,7 +20,7 @@ const Post = async () => {
     useCdn: true
   });
 
-  const result = await client.fetch(`*[_type == "post"]`, { next: { revalidate: 3600 } });
+  const result = await client.fetch(`*[_type == "post"]`, { next: { revalidate: 36 } });
   const builder = imageUrlBuilder(client);
   const postsToDisplay = result;
  
