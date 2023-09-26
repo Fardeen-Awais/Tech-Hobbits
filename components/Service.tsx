@@ -10,7 +10,7 @@ const Service = async () => {
         useCdn: true
     });
 
-    const ServiceCategory = await client.fetch(`*[_type == 'servicecategory']{_id,title}`, { caches: 'no-store' });
+    const ServiceCategory = await client.fetch(`*[_type == 'servicecategory']{_id,title}`, { next: { revalidate: 6 } });
     return (
 
         <div className='flex flex-col min-h-screen py-10'>

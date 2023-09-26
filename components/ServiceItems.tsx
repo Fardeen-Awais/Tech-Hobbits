@@ -23,7 +23,7 @@ const ServiceItems = async ({ categoryId }: any) => {
         slug,
         title,
         desc,
-      }`, { caches: 'no-store' });
+      }`, { next: { revalidate: 6 } });
     return (
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-x-10 max-w-7xl px-10 text-center gap-5'>
             {service.map((service: any) => (
